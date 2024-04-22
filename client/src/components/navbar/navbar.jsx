@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { TextModal } from "../../components";
 import { TbBrandPagekit } from "react-icons/tb";
 import { MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);

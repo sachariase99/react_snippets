@@ -1,16 +1,19 @@
+import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components";
 import { Homepage } from "./pages";
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <>
       <Router>
-        <Navbar />
-        <div className="ml-64">
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-        </Routes>
+        <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        <div className={isMenuOpen ? "ml-64" : "ml-16"}>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+          </Routes>
         </div>
       </Router>
     </>
