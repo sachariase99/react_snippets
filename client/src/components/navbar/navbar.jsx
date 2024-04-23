@@ -19,7 +19,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
         </Link>
         <MdOutlineKeyboardDoubleArrowLeft
           onClick={toggleMenu}
-          className="absolute top-1/2 -translate-y-1/2 right-2 cursor-pointer"
+          className="absolute top-1/2 -translate-y-1/2 right-2 cursor-pointer hover:text-blue-400"
         />
       </div>
       <div className="p-4">
@@ -42,7 +42,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
       <div className="w-full h-24 flex justify-center items-center text-3xl font-bold uppercase border-b-2 relative">
         <MdOutlineKeyboardDoubleArrowLeft
           onClick={toggleMenu}
-          className="cursor-pointer rotate-180"
+          className="cursor-pointer rotate-180 hover:text-blue-400"
         />
       </div>
       <div>
